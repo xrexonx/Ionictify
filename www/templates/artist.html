@@ -1,0 +1,12 @@
+<ion-view view-title="{{artistName | capitalize}}">
+    <ion-content ng-init="actions.getArtistAlbums()">
+        <div class="list">
+            <a on-swipe-left="actions.onSwipeLeft(album.id)" on-hold="actions.onHold(album.id)" class="item item-thumbnail-left item-icon-right" ng-repeat="album in albums" ui-sref="app.getAlbum({albumId: album.id})">
+                <img src="{{album.images[2].url}}">
+                <h2>{{album.name}}</h2>
+                <p>{{album.album_type | capitalize}}</p>
+                <i class="icon ion-ios-arrow-forward"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

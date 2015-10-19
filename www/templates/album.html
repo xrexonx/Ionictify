@@ -1,0 +1,22 @@
+<ion-view view-title="{{artistName | capitalize}}">
+    <ion-content ng-init="actions.getAlbums()">
+        <div class="list card">
+            <div class="item">
+                <h2>{{album.name}}</h2>
+                <p>{{album.release_date}}</p>
+            </div>
+            <div class="item item-body">
+                <!--<iframe src="https://embed.spotify.com/?uri=spotify:album:4pT2NPbgafNbgbXxU3EbRn" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>-->
+                <img class="full-image" src="{{album.images[0].url}}">
+            </div>
+            <div class="list">
+                <a class="item item-icon-right" ng-repeat="track in album.tracks.items"  href="#">
+                    <i class="icon ion-ios-play-outline"></i>
+                    <h2>{{track.name}}</h2>
+                    <p>{{track.duration_ms | date : 'm:ss'}}</p>
+                    <p ng-if="track.explicit">Explicit</p>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view view-title="Artist">
+  <ion-content>
+      <div class="list">
+           <a class="item item-thumbnail-left item-icon-right" ng-repeat="artist in artists" ui-sref="app.albums({artistId: artist.id, name: artist.name})">
+              <img src="{{artist.images[1].url}}">
+              <h2>{{artist.name}}</h2>
+              <p>{{artist.genres[0] | capitalize}}</p>
+              <i class="icon ion-ios-arrow-forward"></i>
+          </a>
+      </div>
+  </ion-content>
+</ion-view>
