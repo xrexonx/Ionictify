@@ -48,8 +48,8 @@
                             // add cancel code..
                         },
                         buttonClicked: function(index) {
-                            console.log(index);
-                            console.log($state);
+                            //console.log(index);
+                            //console.log($state);
                             $state.go('app.browse');
 
                             return true;
@@ -66,9 +66,7 @@
                     alert('Swiped to left.');
                 }
             };
-
             //console.log(vm.actions);
-
         });
 
 })();
