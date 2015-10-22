@@ -61,13 +61,13 @@
                     }, 5000);
                 },
                 onSwipeLeft: function (iAlbumId) {
-                    //console.log(iAlbumId);
-                    //vm.actions.getAlbums(iAlbumId);
-                    $state.go('app/getAlbum/'+iAlbumId);
+                    //$state.go('app/getAlbum/'+iAlbumId);
+
+                    alert('Swiped to left.');
                 }
             };
 
-            console.log(vm.actions);
+            //console.log(vm.actions);
 
         });
 
