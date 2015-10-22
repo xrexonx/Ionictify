@@ -17,7 +17,7 @@ Dependencies need to start Ionic Application, Kindly click links below for the d
 ### Step 1: Install Ionic Dependencies
 ```sh
 # for this project only
-$ npm install -g cordova ionic
+$ sudo npm install -g cordova ionic
 
 # other dependencies
 $ npm install -g bower
